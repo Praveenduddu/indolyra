@@ -19,7 +19,7 @@ const products = [
     id: 2,
     name: 'Sona Masoori',
     description: 'Light, fluffy everyday rice from South India',
-    image: 'https://images.unsplash.com/photo-1597916829826-02e5bb4f3973?auto=format&fit=crop&q=80&w=1200',
+    image: 'https://images.unsplash.com/photo-1596547609652-9cb5d8d8ce30?auto=format&fit=crop&q=80&w=1200',
     tags: ['Everyday', 'Light'],
     stats: { cooking: '15 min', texture: 'Fluffy' },
   },
@@ -43,15 +43,15 @@ const products = [
     id: 5,
     name: 'Brown Basmati',
     description: 'Whole grain nutrition with authentic flavor',
-    image: 'https://images.unsplash.com/photo-1563636619-e9147da919f3?auto=format&fit=crop&q=80&w=1200',
+    image: 'https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?auto=format&fit=crop&q=80&w=1200',
     tags: ['Healthy', 'Whole Grain'],
     stats: { fiber: 'High', gi: 'Low' },
   },
 ];
 
-const ProductCard = ({ product, setCursorVariant }) => {
+const ProductCard = ({ product }) => {
   return (
-    <div className="relative flex-shrink-0 w-[85vw] md:w-[45vw] h-[60vh] md:h-[70vh] mr-[5vw] rounded-2xl overflow-hidden group">
+    <div className="relative flex-shrink-0 w-[90vw] md:w-[45vw] h-[60vh] md:h-[70vh] mr-[5vw] rounded-2xl overflow-hidden group">
       <motion.img
         src={product.image}
         alt={product.name}
@@ -89,8 +89,7 @@ const ProductCard = ({ product, setCursorVariant }) => {
   );
 };
 
-const Products = ({ setCursorVariant }) => {
-  const sectionRef = useRef(null);
+const Products = () => {
   const triggerRef = useRef(null);
   const horizontalRef = useRef(null);
   const ctaBtnRef = useMagnetic(0.3);
@@ -143,12 +142,11 @@ const Products = ({ setCursorVariant }) => {
               <ProductCard 
                 key={product.id} 
                 product={product} 
-                setCursorVariant={setCursorVariant} 
               />
             ))}
             
             {/* Final Slide with CTA */}
-            <div className="flex-shrink-0 w-[85vw] md:w-[45vw] flex flex-col items-center justify-center bg-indolyra-950 rounded-2xl mr-[5vw] p-12 text-center">
+            <div className="flex-shrink-0 w-[90vw] md:w-[45vw] flex flex-col items-center justify-center bg-indolyra-950 rounded-2xl mr-[5vw] p-12 text-center">
               <h3 className="font-display text-3xl md:text-4xl text-white mb-6">
                 Ready to partner with India's finest?
               </h3>
@@ -157,8 +155,6 @@ const Products = ({ setCursorVariant }) => {
                   className="btn-primary"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  onMouseEnter={() => setCursorVariant('hover')}
-                  onMouseLeave={() => setCursorVariant('default')}
                 >
                   Request Custom Quote
                 </motion.button>

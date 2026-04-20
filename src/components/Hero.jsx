@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowDown, Sparkles } from 'lucide-react';
 import { useMagnetic } from '../hooks/useMagnetic';
 
-const Hero = ({ setCursorVariant }) => {
+const Hero = () => {
   const containerRef = useRef(null);
   const primaryBtnRef = useMagnetic(0.3);
   const secondaryBtnRef = useMagnetic(0.3);
@@ -76,7 +76,7 @@ const Hero = ({ setCursorVariant }) => {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1536617621572-1d5f1e6269a0?auto=format&fit=crop&q=80')`,
+            backgroundImage: `url('https://images.unsplash.com/photo-1596547609652-9cb5d8d8ce30?auto=format&fit=crop&q=80')`,
           }}
         />
         <div className="absolute inset-0 bg-indolyra-950/60" />
@@ -147,8 +147,6 @@ const Hero = ({ setCursorVariant }) => {
               className="btn-primary group"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onMouseEnter={() => setCursorVariant('hover')}
-              onMouseLeave={() => setCursorVariant('default')}
             >
               Explore Products
               <motion.span
@@ -166,8 +164,6 @@ const Hero = ({ setCursorVariant }) => {
               className="btn-outline"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onMouseEnter={() => setCursorVariant('hover')}
-              onMouseLeave={() => setCursorVariant('default')}
             >
               Watch Our Story
             </motion.button>

@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Send, Check, Loader2, Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
 import { useMagnetic } from '../hooks/useMagnetic';
 
-const Contact = ({ setCursorVariant }) => {
+const Contact = () => {
   const submitBtnRef = useMagnetic(0.2);
   const [formData, setFormData] = useState({
     name: '',
@@ -66,7 +66,7 @@ const Contact = ({ setCursorVariant }) => {
   const contactInfo = [
     { icon: Mail, label: 'Email', value: 'exports@indolyra.com' },
     { icon: Phone, label: 'Phone', value: '+91 98765 43210' },
-    { icon: MapPin, label: 'Office', value: 'Mumbai, Maharashtra, India' },
+    { icon: MapPin, label: 'Office', value: 'Vishakhapatnam, Andhra Pradesh' },
   ];
 
   return (
@@ -296,8 +296,6 @@ const Contact = ({ setCursorVariant }) => {
                       className="w-full mt-8 btn-primary py-4 text-base font-semibold disabled:opacity-70"
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
-                      onMouseEnter={() => setCursorVariant('hover')}
-                      onMouseLeave={() => setCursorVariant('default')}
                     >
                       <AnimatePresence mode="wait">
                         {isSubmitting ? (

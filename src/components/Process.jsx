@@ -110,7 +110,7 @@ const ProcessCard = ({ step, index, progress }) => {
   );
 };
 
-const Process = ({ setCursorVariant }) => {
+const Process = () => {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -134,7 +134,7 @@ const Process = ({ setCursorVariant }) => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80')`,
+            backgroundImage: `url('https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&q=80')`,
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-indolyra-950 via-indolyra-950/95 to-indolyra-950" />
@@ -199,8 +199,6 @@ const Process = ({ setCursorVariant }) => {
             className="btn-primary"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onMouseEnter={() => setCursorVariant('hover')}
-            onMouseLeave={() => setCursorVariant('default')}
           >
             Schedule a Tour
           </motion.button>
