@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { ArrowDown, Sparkles } from 'lucide-react';
+import { ArrowDown } from 'lucide-react';
 import { useMagnetic } from '../hooks/useMagnetic';
 
 const Hero = () => {
@@ -152,43 +152,6 @@ const Hero = () => {
             >
               Watch Our Story
             </motion.button>
-          </div>
-        </motion.div>
-      </motion.div>
-
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20"
-      >
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ repeat: Infinity, duration: 2, ease: 'easeInOut' }}
-          className="flex flex-col items-center gap-2 text-white/40"
-        >
-          <span className="text-xs uppercase tracking-widest">Scroll</span>
-          <ArrowDown className="w-4 h-4" />
-        </motion.div>
-      </motion.div>
-    </section>
-  );
-};
-
-export default Hero;
-  animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 2 + index * 0.1 }}
-                className="text-center"
-              >
-                <div className="font-display text-3xl md:text-5xl text-gold-400 mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-xs md:text-sm text-white/60 uppercase tracking-wider">
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
           </div>
         </motion.div>
       </motion.div>
