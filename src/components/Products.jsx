@@ -19,7 +19,7 @@ const products = [
     id: 2,
     name: 'Sona Masoori',
     description: 'Light, fluffy everyday rice from South India',
-    image: 'https://images.unsplash.com/photo-1596547609652-9cb5d8d8ce30?auto=format&fit=crop&q=80&w=1200',
+    image: 'https://images.unsplash.com/photo-1597916829826-02e5bb4f3973?auto=format&fit=crop&q=80&w=1200',
     tags: ['Everyday', 'Light'],
     stats: { cooking: '15 min', texture: 'Fluffy' },
   },

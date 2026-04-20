@@ -76,7 +76,7 @@ const Hero = () => {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1596547609652-9cb5d8d8ce30?auto=format&fit=crop&q=80')`,
+            backgroundImage: `url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80')`,
           }}
         />
         <div className="absolute inset-0 bg-indolyra-950/60" />
@@ -87,21 +87,6 @@ const Hero = () => {
         style={{ opacity }}
         className="relative z-20 flex flex-col items-center justify-center min-h-screen px-6 text-center"
       >
-        {/* Badge */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="mb-8"
-        >
-          <div className="px-6 py-3 rounded-full flex items-center gap-2 bg-indolyra-900 border border-white/20">
-            <Sparkles className="w-4 h-4 text-gold-400" />
-            <span className="text-sm text-white/80 tracking-wider uppercase">
-              Premium Quality Since 1995
-            </span>
-          </div>
-        </motion.div>
-
         {/* Main Title with 3D Text Reveal */}
         <motion.h1
           variants={containerVariants}
