@@ -154,24 +154,30 @@ const Hero = () => {
             </motion.button>
           </div>
         </motion.div>
+      </motion.div>
 
-        {/* Stats */}
+      {/* Scroll Indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 2.5 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20"
+      >
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.8 }}
-          className="absolute bottom-32 left-0 right-0 px-6"
+          animate={{ y: [0, 8, 0] }}
+          transition={{ repeat: Infinity, duration: 2, ease: 'easeInOut' }}
+          className="flex flex-col items-center gap-2 text-white/40"
         >
-          <div className="max-w-4xl mx-auto grid grid-cols-3 gap-8 md:gap-16">
-            {[
-              { value: '28+', label: 'Years Excellence' },
-              { value: '50+', label: 'Countries Served' },
-              { value: '100K+', label: 'Tons Exported' },
-            ].map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+          <span className="text-xs uppercase tracking-widest">Scroll</span>
+          <ArrowDown className="w-4 h-4" />
+        </motion.div>
+      </motion.div>
+    </section>
+  );
+};
+
+export default Hero;
+  animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 2 + index * 0.1 }}
                 className="text-center"
               >
